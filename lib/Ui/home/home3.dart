@@ -53,12 +53,10 @@ class _Home3State extends State<Home3> {
     } else if (hours >= 21 && hours <= 24) {
       greeting = "Good Night";
     }
-   
+
     // TODO: implement initState
     super.initState();
   }
-
- 
 
   @override
   Widget build(BuildContext context) {
@@ -90,7 +88,7 @@ class _Home3State extends State<Home3> {
           padding: EdgeInsets.all(10),
           child: Column(children: [
             SizedBox(
-              height: 70,
+              height: 90,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
