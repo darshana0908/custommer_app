@@ -82,7 +82,7 @@ class _DragLocationState extends State<DragLocation> {
             onPressed: () {
               _key.currentState!.openDrawer();
             },
-            icon: Image.asset('assets/icon-05-05.png')),
+            icon: Image.asset('assets/icon-02.png')),
         foregroundColorOnFaded: black,
         foregroundColor: white,
         backgroundColor: appBarBlue,

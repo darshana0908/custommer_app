@@ -14,6 +14,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_sizer/flutter_sizer.dart';
 import 'package:badges/badges.dart' as badges;
+import 'package:lottie/lottie.dart';
 import 'package:zego_uikit_prebuilt_call/zego_uikit_prebuilt_call.dart';
 import 'package:zego_uikit_signaling_plugin/zego_uikit_signaling_plugin.dart';
 import '../../const/app_details.dart';
@@ -101,11 +102,17 @@ class _Home3State extends State<Home3> {
                       fontWeight: FontWeight.bold,
                       fontFamily: 'Macondo'),
                 ),
-                Icon(
-                  Icons.account_circle_rounded,
-                  color: white3,
-                  size: 50,
-                )
+
+                SizedBox(
+                    height: 60,
+                    width: 70,
+                    child: Lottie.asset('assets/default_user.json',
+                        fit: BoxFit.contain)),
+                // Icon(
+                //   Icons.account_circle_rounded,
+                //   color: white3,
+                //   size: 50,
+                // )
               ],
             ),
             Row(

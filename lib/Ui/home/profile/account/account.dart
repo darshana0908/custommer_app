@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:io';
 
 import 'package:customer_app/Ui/conditions/custom_drawer/custom_drawer.dart';
@@ -273,7 +274,8 @@ class _AccountState extends State<Account> {
                             Api().sendFcm(
                                 'Notification',
                                 'We send Notification Hello !',
-                                'dJlSs1SrTW2EU7xOvu7WnA:APA91bH4Zu3Wb_lZDT6jRBmRWUPm7kbPN20QysN-fYV3IMXSCFlQIbnsMlbba8oViiOge0yN6Oq0qcdVyOtYgouMtBhvluW4suz87GBs4Zhx4MPIism9oSwL0LgCnQejH2TCuFke-9ka');
+                                // 'dJlSs1SrTW2EU7xOvu7WnA:APA91bH4Zu3Wb_lZDT6jRBmRWUPm7kbPN20QysN-fYV3IMXSCFlQIbnsMlbba8oViiOge0yN6Oq0qcdVyOtYgouMtBhvluW4suz87GBs4Zhx4MPIism9oSwL0LgCnQejH2TCuFke-9ka');
+                                'fc_kkJDBTJiNoWS8xdY0gq:APA91bEyi1Gyer9IXmJ8zyo5kXf9Uzf9RBtk0M7-XCroAhDnMypr5RIh6zoDa5Ydrku-0ayQ_EBKykR51q43U_HhpMF-bZ0S9oNrUCaKMqb54sY5mdZ7l-ZVuZjUKvvWERZif-NG7Ong');
                           },
                           child: Card(
                             color: backgroundColor2,
@@ -511,6 +513,21 @@ class Api {
       'Authorization': 'key=$fcmKey'
     };
     var request = http.Request('POST', Uri.parse(fcmUrl));
+
+    // request.body = jsonEncode({
+    //   'topic': "all",
+    //   'data': {
+    //     'via': 'FlutterFire Cloud Messaging!!!',
+    //     'count': '100',
+    //   },
+    //   'notification': {
+    //     'title': 'Hello FlutterFire!',
+    //     'body': 'This notification (#100) was created via FCM!',
+    //     "image":
+    //         "https://googleflutter.com/wp-content/uploads/2019/12/flutter_image_network.png"
+    //   },
+    // });
+
     request.body =
         '''{"to":"$fcmToken","priority":"high","notification":{"title":"$title","body":"$body","sound": "default","image": "https://googleflutter.com/wp-content/uploads/2019/12/flutter_image_network.png"
 }}''';

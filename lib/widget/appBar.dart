@@ -19,7 +19,7 @@ class CustomAppBar {
           onPressed: () {
             _key.currentState!.openDrawer();
           },
-          icon: Image.asset('assets/icon-05-05.png')),
+          icon: Image.asset('assets/icon-02.png')),
       systemOverlayStyle: SystemUiOverlayStyle(
           statusBarIconBrightness: Brightness.light,
           statusBarColor: statusBarColor),
